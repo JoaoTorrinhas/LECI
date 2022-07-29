@@ -1,0 +1,6 @@
+Funções SO:
+	-FIll in superblock 	FEITO, CERTO
+	-AllocDataBlock  	FEITO, CERTO
+	-FreeDataBlock 		FEITO, CERTO
+	-GetInodeBlock 		FEITO, CERTO 
+	-TraversePath  		FEITO, CERTO
