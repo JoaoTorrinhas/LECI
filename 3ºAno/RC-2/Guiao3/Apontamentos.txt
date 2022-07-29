@@ -1,0 +1,216 @@
+O protocolo RIP faz com que os routers aprendam dinamicamente as outras redes sem precisar de rotas estáticas, caso uma interface falhe, vai haver sempre conectividade pq o RIP trata de arranjar uma maneira, enquanto q se fosse com rotas estáticas a conectividade perdia-se
+
+CUSTOS:
+	-RIPv2 -> numero de routers intermédios até ao destino
+	-RIPng ->custo da interface de saida de cada router até ao destino
+
+1.2
+	-O RIPv1 não anuncia máscaras de sub-redes, apenas prefixos de rede, daí ele assumir que tb se trata de um /24 qnd na verdade é um /25. As máscares de rede são assumidas com base na máscara de interface de entrada
+
+1.3
+	-Wireshark a correr na rede 10.1.3.0:
+		->se for (src:10.1.3.3, dst:255.255.255.255) o pacote RIP contêm o Ip address 192.168.3.0, Metric:1
+		->se for (src:10.1.3.1, dst:255.255.255.255) o pacote RIP contêm os Ip's address's 192.168.1.0, Metric:1/ 192.168.2.0, Metric:2/ 10.1.2.0, Metric:1/ 10.2.3.0, Metric:2
+	Ou seja, o split-horizon está ativado pq não há loop 
+	
+
+1.4
+	-As routing tables continuam iguais
+	-No RIPv2 os anuncios incluem o prefixo de rede e a máscara
+
+1.5
+	-Destino passou a ser 224.0.09 ao invés de 255.255.255.255(RIPv1)
+
+1.6
+	-Aparece mais ip's no src 10.1.3.1 (Sem o split-horizon ativo)
+
+1.7
+	-A interface f0/0 da routing table de R1 desaparece
+	-Para tds os caminhos que tinham como "acesso" o caminho f0/0, vão pelo outro caminho que tinha custo maior
+	-Por exemplo, para o R1, o caminho para a rede 192.168.3.3 seria pela interface f0/0 10.1.3.1 (caminho de custo minimo) mas como esta foi cortada/shutdown o caminho que vai aparecer agr na tabela de encaminhamento do R1 é o da rede 10.1.2.0 para a rede 10.2.3.0 até ao destino 192.168.3.3 ou seja custo/métrica 2.
+	-O msm vai acontecer de forma semelhante para os outros Routers
+
+1.8
+	-O contrário do que está em cima
+
+1.9
+	-Anula a rota que foi criada dinamicamente, "via 10.1.3.3" e fica apenas com a static 
+	-Porque os routers usam rotas static sobre quaisqueres rotas dinâmicas o que pode ser um erro, porque às vezes pode-se criar rotas static como backup caso haja algum problema e logo não queremos que as rotas static sejam usadas enquanto houver rotas dinâmicas acessíveis.   
+
+1.10
+	-Sem a rota antiga e com a rota nova ficou:  10.2.3.0/24 [120/1] via 10.1.2.2, 00:00:20, FastEthernet0/1
+	-Com a rota antiga ficou:  10.2.3.0/24 [1/0] via 10.1.2.2
+	-Ou seja com a rota antiga era static ([1/0]) com a rota nova é dinamica ([120/1])
+	-Basicamente usa-se o 200 porque é maior que 120 (distância default do RIP), logo como é maior dá prioridade à que tiver menor distância, tornando a RIP(120) a principal e como backup a static(200). 
+	
+1.11
+	-Explain how an IPv4 packet destined to a network not known by the routers is routed??
+	 10.0.0.0/8 is variably subnetted, 5 subnets, 2 masks
+C        10.1.2.0/24 is directly connected, FastEthernet0/1
+L        10.1.2.1/32 is directly connected, FastEthernet0/1
+C        10.1.3.0/24 is directly connected, FastEthernet0/0
+L        10.1.3.1/32 is directly connected, FastEthernet0/0
+R        10.2.3.0/24 [120/1] via 10.1.3.3, 00:00:36, FastEthernet0/0
+                     [120/1] via 10.1.2.2, 00:00:33, FastEthernet0/1
+      192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.1.0/24 is directly connected, FastEthernet1/0
+L        192.168.1.1/32 is directly connected, FastEthernet1/0
+R     192.168.2.0/24 [120/1] via 10.1.2.2, 00:00:33, FastEthernet0/1
+      192.168.3.0/25 is subnetted, 1 subnets
+R        192.168.3.0 [120/1] via 10.1.3.3, 00:00:36, FastEthernet0/0
+	-Adicionou a rota default 0.0.0.0
+
+2.1
+	-Conectividade está a funcionar
+	Tabela router1:
+	 10.0.0.0/8 is variably subnetted, 5 subnets, 2 masks
+C        10.1.2.0/24 is directly connected, FastEthernet0/1
+L        10.1.2.1/32 is directly connected, FastEthernet0/1
+C        10.1.3.0/24 is directly connected, FastEthernet0/0
+L        10.1.3.1/32 is directly connected, FastEthernet0/0
+O        10.2.3.0/24 [110/2] via 10.1.3.3, 00:00:33, FastEthernet0/0
+                     [110/2] via 10.1.2.2, 00:01:13, FastEthernet0/1
+      192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.1.0/24 is directly connected, FastEthernet1/0
+L        192.168.1.1/32 is directly connected, FastEthernet1/0
+O     192.168.2.0/24 [110/2] via 10.1.2.2, 00:01:03, FastEthernet0/1
+      192.168.3.0/25 is subnetted, 1 subnets
+O        192.168.3.0 [110/2] via 10.1.3.3, 00:00:18, FastEthernet0/0
+	
+	-Tb aparecem as interfaces ligadas como por exemplo, a 10.1.2.1
+
+	Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+	Fa1/0        1     0               192.168.1.1/24     1     DR    0/0
+	Fa0/1        1     0               10.1.2.1/24        1     DR    1/1
+	Fa0/0        1     0               10.1.3.1/24        1     DR    1/1
+
+
+2.2
+	Neighbor ID     Pri   State           Dead Time   Address         Interface
+	192.168.2.2       1   FULL/BDR        00:00:34    10.1.2.2        FastEthernet0/1
+	192.168.3.3       1   FULL/BDR        00:00:32    10.1.3.3        FastEthernet0/0
+
+	Os valores do NeighborID são o routerID de cada router?????
+	
+Router1:
+	Lan 10.1.2.0-
+	DR is 10.1.2.1 BDR is 10.1.2.2
+	Lan 10.1.3.1-	
+	DR is 10.1.3.1 BDR is 10.1.3.3
+	
+Router2:
+	Lan 10.2.3.0-
+	DR is 10.2.3.1 BDR is 10.2.3.3
+	Lan 10.1.2.0-
+	DR is 10.1.2.1 BDR is 10.1.2.2
+	
+Router3:
+	Lan 10.2.3.0-
+	DR is 10.2.3.1 BDR is 10.2.3.3
+	Lan 10.1.3.0-
+	DR is 10.1.3.1 BDR is 10.1.3.3
+
+	-Pq destas escolhas??? (Na teórica escolhe o DR é o que tem maior prioridade e em caso de empate, escolhe-se o que tem o RouterId maior (RouterID é a interface com maior valor do router), isto caso os routers iniciem o processo OSPF quase ao msm tempo. Caso um router inicie o processo OSPF esse router fica como DR e passado alguns minutos outro router inicie o processo OSPF este router passa a ser o BDR uma vez que já existe um DR, os restantes routers são meros participantes.
+
+	-Os custos parecem estar bem mas ver o exemplo do router1 ex-2.1 para confirmar 
+
+2.3
+	Router1:
+	Lan 10.1.2.0- Neighbor(2.2.2.2)
+	DR is 10.1.2.2 BDR is 10.1.2.1
+	Lan 10.1.3.0- Neighbor(3.3.3.3)	
+	DR is 10.1.3.3 BDR is 10.1.3.1
+	
+	Router2:
+	Lan 10.2.3.0- Neighbor3.3.3.3
+	DR is 10.2.3.3 BDR is 10.2.3.1
+	Lan 10.1.2.0- Neighbor(1.1.1.1)
+	DR is 10.1.2.2 BDR is 10.1.2.1
+	
+	Router3:
+	Lan 10.2.3.0- Neighbor(2.2.2.2)
+	DR is 10.2.3.3 BDR is 10.2.3.1
+	Lan 10.1.3.0- Neighbor(1.1.1.1)
+	DR is 10.1.3.3 BDR is 10.1.3.0
+	
+	Para cada lan o valor do DR foi trocado pelo valor do BDR, devido à mudança no RouterID
+
+2.4
+	Primeiramente são mostrados os pacotes DB onde vai ser trocada a informação da link-state database de cada router. Posteriormente vão ser trocados os pacotes LS update, com as atualizações das entradas link-state que cada router precisa (LS Resquest), e os respetivos pacotes LS acknowladge. Após o shutdown na interface 0/1 do router1 o msm com o routerID=1.1.1.1 vai enviar uma LSA com os updates. Após o no shutdown, voltam a ser transmitidos os pacotes como eram antes transmitidos.
+
+2.6
+	Basicamente aparecem os caminhos de menor custo na routing table. Por exemplo, se existirem, do router2, dois caminhos para a rede 192.168.3.3 e tenham ambos o custo igual, vão aparecer na routing table os dois caminhos, mas como a porta de um deles foi alterada para 50, já só vai aparecer o caminho pelo f0/1 (custo 3 até à rede destino) em vez do caminho pelo f0/0 (custo 50 + 1 até á rede destino)
+
+2.7
+	Foi adicionada uma default route por parte do Router1 (0.0.0.0/0)
+
+3.1
+	Só há conectividade com alguns porque existe as rotas para esse destino, se não houver rota então não vai haver conectividade
+
+3.2
+	-Foi adicionado à routing table os endereços das redes que não estavam anteriormente.
+	-Há conectividade total em tds as redes
+
+3.3
+	-Em vez de ter dois caminhos para a rede 2001:2:3::/64 tem só um, ou seja, dos dois caminhos escolheu a que tem custo minimo
+
+	ANTES:
+	C   2001:0:1::/64 [0/0]
+     via FastEthernet1/0, directly connected
+L   2001:0:1::1/128 [0/0]
+     via FastEthernet1/0, receive
+R   2001:0:2::/64 [120/2]
+     via FE80::C802:23FF:FE2C:6, FastEthernet0/1
+R   2001:0:3::/64 [120/2]
+     via FE80::C803:44FF:FEA8:8, FastEthernet0/0
+C   2001:1:2::/64 [0/0]
+     via FastEthernet0/1, directly connected
+L   2001:1:2::1/128 [0/0]
+     via FastEthernet0/1, receive
+C   2001:1:3::/64 [0/0]
+     via FastEthernet0/0, directly connected
+L   2001:1:3::1/128 [0/0]
+     via FastEthernet0/0, receive
+R   2001:2:3::/64 [120/2]
+     via FE80::C802:23FF:FE2C:6, FastEthernet0/1
+     via FE80::C803:44FF:FEA8:8, FastEthernet0/0
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+	DEPOIS:
+C   2001:0:1::/64 [0/0]
+     via FastEthernet1/0, directly connected
+L   2001:0:1::1/128 [0/0]
+     via FastEthernet1/0, receive
+R   2001:0:2::/64 [120/2]
+     via FE80::C802:23FF:FE2C:6, FastEthernet0/1
+R   2001:0:3::/64 [120/11]
+     via FE80::C803:44FF:FEA8:8, FastEthernet0/0
+C   2001:1:2::/64 [0/0]
+     via FastEthernet0/1, directly connected
+L   2001:1:2::1/128 [0/0]
+     via FastEthernet0/1, receive
+C   2001:1:3::/64 [0/0]
+     via FastEthernet0/0, directly connected
+L   2001:1:3::1/128 [0/0]
+     via FastEthernet0/0, receive
+R   2001:2:3::/64 [120/2]
+     via FE80::C802:23FF:FE2C:6, FastEthernet0/1
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+3.6 
+	Adicionou uma rota padrao ::/0 ao router2 e ao router3	
+	
+4
+
+
+5.1 
+	O database summary basicamente tem as duas redes, a da area 0 e a da area 51 (10.1.3.0) pq o router 3 é um router ABR (Area border Router), ou seja, é o que permite o encaminhamento de rotas entre areas
+
+6
+	
+
+
+	
+

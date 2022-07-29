@@ -1,0 +1,40 @@
+1.
+	-V
+	-V, 
+	-F, (os end-points são os 10's)
+	-F
+2.
+	-V
+	-V
+	-V
+	-F
+3.
+	-V
+	-F
+	-F
+	-F, (??Se for pelo valor do Weight, adicionou 3 redes)
+4.
+	-V
+	-V (not sure??)
+	-F (2003)
+	-F (por causa do incomplete mas not sure)
+5.
+	-V
+	-V
+	-V
+	-F
+6.
+	-V
+	-F
+	-V
+	-F
+7.
+	-V
+	-V
+	-V
+	-V
+8.
+	-V
+	-V
+	-F
+	-

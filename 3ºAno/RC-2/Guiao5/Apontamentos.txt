@@ -1,0 +1,107 @@
+1.
+	Redistribute - Todas as redes que se aprendem via ospf pertencem ao sistema autonomo e temos de as "enviar" por bgp para os vizinhos
+	
+	-Ospf apenas trabalha dentro do msm sistema autónomo
+	-Só no exercício 3 é que vemos as tabelas de encaminhamento tds por causa do next hope-self
+
+2.	
+	-A rota para a rede 192.20.0.0 é a partir de ibgp uma vez que a rede não tem ospf, apenas a rede 200.20.20.0 e a rede 192.20.1.0 é que têm ospf
+	-Pelo show ip bgp no router2A, vemos que o vizinho (router2B) sabe o caminho para a rede 192.30.30.0 pela interface 200.3.2.3 mas como o router2A não conhece esse next-hop, não vai aparecer na tabela de encaminhamento do router2A
+	-O msm vai acontecer para o router2B, o vizinho informa que para a rede 192.10.10 é pela interface 200.1.2.1 mas como o router2B não conhece essa interface, não vai adicionar à sua tabela de encaminhamento (show ip route)
+	-Se tiver o i (no show ip bgp) significa que aprendeu dentro do AS1002, IBGP), caso contrário aprendeu do AS1003, EBGP (isto para o router2B)
+
+3.
+	-Todas as rotas por EBGP têm custo administrativo de 20, se fosse por IBGP era de 200
+	-Agora no router2A já vai aparecer na tabela de encaminhamento a rede 192.30.30.0 pq o next-hop passa a ser o 200.20.20.22 (router2A conhece estar rede) em vez do 200.3.2.3
+	-Para o router2B o processo é semelhante apenas muda os valores das interfaces
+	-O router2B aprende via EBGP a rede 192.30.30.0 e informa o router2A via IBGP metendo esta rede na tabela de encaminhamento. O processo para o router2B ter a rede 192.10.10.0 na tabela de encaminhamento é parecido ao anterior
+
+
+4.
+	-São trocados mensagens keepalive do 200.1.2.1 para o 200.1.2.2 e o 200.1.2.2, como ocorre sobre TCP, envia um ACK ao 200.1.2.1 antes do clear bgp
+	-Após o clear bgp são trocadas as mensagens normais do tcp para voltar a establecer a conexão
+	-Depois são trocadas mensagens OPEN para establecer a conexão BGP
+	-Depois são trocadas as mensagens keepalive
+	-E depois são feitos os updates para cada router conhecer as redes, via BGP, através dos seus vizinhos
+
+
+5.
+	-Após o shutdown da interface f0/1 do router3, o router2A (interface 200.1.2.2) envia uma mensagem update, com o contéudo -> Withdraw routes: 192.30.30.0, ou seja, dizendo q a rede 192.30.30.0 foi abaixo  , para o router1 (interface 200.1.2.1).
+	-Depois de ativar novamente a interface, o router2A volta a enviar um pacote update, com a msm informação antes do shutdown, ou seja, dizendo que para a rede 192.30.30.0 tem de passar pela interface 200.1.2.2 (Next-hop) com o AS_PATH de 1002 1003 e ORIGIN: IGP, para o router1	
+
+
+6.
+	-Router1 e router3 vao ter duas entradas BGP (tabela de encaminhamento), rede 192.20.0.0 e 192.20.1.0
+	-Depois de anunciar o agregado apenas vão ter uma entrada BGP
+
+	router1:
+	-ANTES
+      192.10.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.10.10.0/24 is directly connected, FastEthernet0/1
+L        192.10.10.1/32 is directly connected, FastEthernet0/1
+B     192.20.0.0/24 [20/0] via 200.1.2.2, 00:00:18
+B     192.20.1.0/24 [20/2] via 200.1.2.2, 00:00:18
+B     192.30.30.0/24 [20/0] via 200.1.2.2, 00:01:18
+      200.1.2.0/24 is variably subnetted, 2 subnets, 2 masks
+C        200.1.2.0/24 is directly connected, FastEthernet0/0
+L        200.1.2.1/32 is directly connected, FastEthernet0/0
+B     200.20.20.0/24 [20/0] via 200.1.2.2, 00:00:18
+
+
+	-DEPOIS
+      192.10.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.10.10.0/24 is directly connected, FastEthernet0/1
+L        192.10.10.1/32 is directly connected, FastEthernet0/1
+B     192.20.0.0/23 [20/0] via 200.1.2.2, 00:04:59
+B     192.30.30.0/24 [20/0] via 200.1.2.2, 00:31:22
+      200.1.2.0/24 is variably subnetted, 2 subnets, 2 masks
+C        200.1.2.0/24 is directly connected, FastEthernet0/0
+L        200.1.2.1/32 is directly connected, FastEthernet0/0
+B     200.20.20.0/24 [20/0] via 200.1.2.2, 01:06:39
+
+	
+
+7.
+	-Se pelo menos uma das redes do agregado estiver a funcionar, o agregado não é deitado abaixo, se as duas falharem o agregado é deitado abaixo.
+ 	-Por exemplo, se o router2A vê que as interfaces das redes 192.20.0.0 e a rede 192.20.1.0 estao down e envia a informação ao vizinho, router1 a dizer para deitar o agregado abaixo.
+
+	7.1
+		-As routing tables continuam iguais
+	7.2
+		- B 192.20.0.0/23 [20/0] via 200.1.2.2 esta rota desapareceu, por causa o agregado não existir mais
+		- A informação que vem no pacote bgp UPDATE é de que o agregado foi deitado abaixo:
+			->Withdrawn routes:
+				->192.20.0.0/23
+
+9.
+	-O ipv4 comporta-se da msm maneira que antes.
+	-Para ipv6, os pacotes update são diferentes, há um campo novo (MP_REACH_NLRI) onde diz a rede que está a ser anunciada (NRLI)
+
+10. 
+	-Ver os wiresharks que estão na pasta
+
+11.
+	-Todos os routers vão adicionar a rede nova às suas tabelas de encaminhamento
+	-E vai ser aprendida por BGP
+	-Apesar de serem redes privadas enquanto não configurarmos os router para não as aprenderem (políticas), eles vão assumir essas redes como públicas e vão aprendê-las na msm
+
+12.
+	-Todos os routers aprendem a rota por defeito para o AS1003
+	-O router 2B aprende que para o AS1003 tem a rota por defeito 0.0.0.0 cujo next-hope é a interface 0/0 do router3(200.3.2.3).
+	-O router2A aprende essa rota por defeito a partir do router2B (IBGP) e o router1 aprende a rota por defeito a partir do router2A (EBGP)
+
+13.
+	-prefix-list funciona tipo um if statment
+	-O sistema autonomo não deve anunciar (OUT)
+	-Por exemplo, se AS1002 tiver aplicadas as regras para OUT, tudo que for para fora (OUT) vai à prefix-list e se der denied não é anunciada para fora, se der permit é anunciada para fora.
+	-As rotas para as redes privadas deixam de ser anunciadas para fora, ou seja, na router1 e no router3 não tem a rota para a rede privada 192.168.1.0
+	-O router1 também deixa de ter a rota 192.168.1.0 
+14.
+	-Não aceitar a routa por defeito do 1003
+	-Prefix-list no sentido IN.
+	-Todos os anuncios que receber do vizinho, passa pela prefix-list e se der denied não é anunciado internamente, caso dê permit é anunciada internamente
+	-Eliminou a rota default (0.0.0.0) de cada um dos routers (2A e 2B)
+
+
+
+ 

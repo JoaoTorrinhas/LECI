@@ -1,0 +1,18 @@
+1.
+	Irá chegar somente à vlan6 do edificio 1 pq entre a mesma há portas trunk que suportam a vlan1,6,10 e 11.
+
+2.
+	Vai ter 2 rotas de omissão com custo de 53.
+
+3.
+	i) Ambos os routers têm de ter o mesmo custo e o mesmo tipo
+	ii)Tem de ser criada uma floating static route com um custo administrativo superior às rotas aprendidas por ospf (110), por exemplo, custo administrativo de 200 (Backup route).
+
+5.
+	i) Temos de configurar o rip no core, para anunciar a rede por omissão (rede para a internet) ao edificio antigo, e através do opsf vai anunciar/redistribuir a rede, do router x, para os outros routers.
+
+	ii) Anunciar a rede por omissão, através do rip.
+
+6.
+	Temos de adicionar tuneis entre c1-routerA c1-routerB e c2-routerA e c2-routerB e depois adicionar politicas para garantir que só entra nos tuneis pacotes vindos do edificio antigo.
+	

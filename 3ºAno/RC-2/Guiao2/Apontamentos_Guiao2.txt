@@ -1,0 +1,28 @@
+-1.3 e 2 é fazer as liagações e meter o wireshark a capturar nos pacotes assinalados na tabela e ver quais os pacotes são capturados.
+
+-No exercício 3, a filtragem dos pacotes é na ligação entre o sw1 e o sw2. No 3.2, depois de a ligação ser do tipo trunk, o pc2 e o pc3 já conseguem comunicar entre si.
+
+
+-No exercício 4, para o trunk, se, por exemplo, se fizer um ping do pc2 para o pc3, o sw1 vai receber a ethernet frame na porta do sw1 correspondente à vlan2 e sw1 vai enviar para o sw2 uma ethernet frame com a tag com a informação que se trata de um pacote correspondente à vlan2 e quando o sw2 receber esse frame, vai buscar o valor que está na tag e vai verificar que é para a vlan2, retira a tag e vai enviar a informação para o pc3, que se encontra na vlan2. (Ver a figura que se encontra abaixo do ex4.1
+
+-No exercício 5, as 3 interfaces virtuais é a (F0/0.1) é a msm coisa que ter 3 interfaces físicas no router para cada vlan.
+-No exercício 5.3, os pacotes aparecem a dobrar. Por exemplo, se for feito um ping do pc1 para o pc4, vai ser feito um ARP para achar o MAC do destino. Sabendo o MAC vai ser feito um ICMP echo request que vai do pc1 para o sw1 e do sw1 para o router (a tag é da vlanID=2 pq sai do sw1, ver imagem), dps o router vai enviar o icmp request para a devida rede (rede da vlan3 que está definida como rota do router) e esse icmp request vai ter agr o vlanID=3 (pq vai do router para o sw1), qnd chega ao request ao pc4 o msm vai enviar um ICMP reply e o processo vai ser o msm, só que em vez de ser um echo request é um echo reply
+
+5.4-
+	Pq é que a tabela do switch L3 está diferente, não tem a rota para 192.168.1.0/24???
+	1ºQuestão- Continua igual
+	2ºQuestão- Não há diferenças
+	3ºQuestão-Concluímos que usar switch layer3 é mais fácil de implementar do que usar um router porque só precisamos de definir um ip para cada vlan, fazendo assim o switching, e dps usar portas trunk enquanto que se for router, para a msm vlan, temos de definir nas interfaces gateways com ips diferentes e ips de rede diferentes tb pq o routing é feito entre redes diferentes.
+
+6.1-
+	root bridge-
+	designed bridge-
+	root port-
+	designed port-
+	root path cost-
+	cost of all ports-
+
+	show spanning-tree vlan 1 dá-nos os valores disto aqui em cima
+
+falta fazer o 6.3, 6.4 e 6.5
+	

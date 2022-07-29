@@ -1,0 +1,37 @@
+1.
+	No caso de um AS multi-homed de não-transito, os routers apenas anunciam para o exterior as suas redes internas enquanto que numa AS de transito os routers anunciam as suas redes internas e todas as rotas que aprendem do exterior.
+
+2.
+	a)
+		Temos de definir o AS C com um valor de local preference maior que o dos outros AS's, por exemplo, 200. Depois caso o C falhe, temos de definir um valor intermédio para o AS B, por exemplo 150. Por fim, caso o B também falhe, temos de atribuir ao AS A o menor valor de local preference, por exemplo 100. 
+
+		Local preference- Escolhe um exit-point para num AS, para o exterior com base no valor do local preference. Valor mais alto vai ser escolhido.
+
+	b)
+		Inicialmente vamos ter de verificar qual é a ligação que está a ser usada. Depois, se a ligação usada for a de satélite, temos de aumentar o valor do local preference no vizinho, para o encaminhamento ser feito preferencialmente pelo mesmo.
+
+	c)
+		Vamos ter de alterar o valor do local preference. Como no enunciado diz-nos que o AS, onde está o operador,  deverá encaminhar o tráfego para a rede externa chinesa pertencente à AS A então, o valor do local preference do mesmo tem de ser maior que o B.
+
+	d)
+		Vamos ter de usar o BGP filtering. Basicamente sempre que o atribute path não tiver o AS do operador dos EUA ou dos Russos, rejeita esses anúncios e não os envia para a rede no Brasil.
+
+3.
+	a)
+		Inicialmente vão ser trocados mensagens UDP LDP hello para o operador descobrir os vizinhos. Após a descoberta de um vizinho LDP, é iniciada a sessão TCP através da qual é trocada a informação sobre o mapeamento das redes ip e as label MPLS
+
+	b)
+		Primeiro vai ter de ser ativar o protocolo LDP para distribuir dinamicamente as label para dps quando se ativar o protocolo MPLS, o mesmo irá determinar o melhor caminho com base nessas label's. (Não sei bem se é preciso dizer só isto, mas segundo o prof não deveria sair isto)
+		
+	c)
+		Pergunta igual ao teste de 12 de novembro de 2019. (Em principio não deve sair isto pelo que o prof falou na OT).
+
+4.
+	a)
+		A chamada é feita através de um SIP proxy. Primeiro o chamador vai enviar uma mensagem invite para o chamado e o mesmo vai enviar uma mensagem 100 trying, 180 ringing e 200 ok, caso atenda. Depois da mensagem 200 OK ambos podem falar.
+
+	b)
+		Primeiro configura-se os registos NAPTR, depois os registos SRV para se descobrir o endereço ip do SIP proxy destino	
+	
+	c) Não sai
+		

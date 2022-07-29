@@ -1,0 +1,2 @@
+Não conseguem comunicar com o pc1,pc2,pc3 e as interfaces f0/1,f0/0 do router 1 pois o mesmo não tem nenhuma routa que lhe permita conhecer a rede 192.168.3.0.
+A solução é definir uma rota no router1 para o msm passar a conhecer a rede 192.168.3.0

@@ -1,0 +1,40 @@
+1.
+	-V
+	-V
+	-F
+	-F (Apenas sao trocados pacotes deste tipo dentro do tunnel)
+2.
+	-V	
+	-V
+	-V
+	-F
+3.
+	-V
+	-F
+	-F
+	-F
+4.
+	-F
+	-F
+	-F
+	-F
+5.
+	-V (Caso haja outra rede que deixe de dar o withdraw route poderá ter outros updates)
+	-F
+	-F
+	-F
+6.
+	-V
+	-V
+	-F (Acho que é qnd não há trafico, ficando assim com uma restrição do tipo IN, ou seja, não aceita tudo que vem do 2007)
+	-F
+7.
+	-F
+	-V
+	-F
+	-F
+8.
+	-V
+	-F
+	-F	
+	-V

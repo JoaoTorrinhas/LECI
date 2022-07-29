@@ -1,0 +1,30 @@
+1.
+	-Há conectividade entre a máquina real (o meu computador) e a máquina virtual
+	-Criamos um utilizador (Pinto da costa)
+	-Criamos um numero de telefone (2000)
+	
+2.
+	-São enviadas mensagens pelo utilizador para a central a dizer que está online
+	-São efetuadas mensagens "register" e dps a central asterix envia uma mensagem 200 OK a dizer que aceitou o registo
+	
+
+3.
+	-
+
+4.
+	-Depois da chamada telefónica vão ser trocados mensagens INVITE
+	-Depois vai aparecer a mensagem trying por parte da central e 200 OK
+	-O pacote bye aparece quando uma das entidades termina a ligação, ou eu ou para quem eu estava a fazer a chamada, neste caso é a central
+
+
+5.
+	-Criar um segundo utilizador
+	-Basicamente quem quiser ligar para o ruicosta tem de liga para o 2002
+	-E para o pinto da costa é para o 2001
+	-Desde que ambos estejam registados
+
+6.
+	-Conseguimos ver tds os movimentos que correm na central entre o meu pc e o outros
+	-Vemos os pacotes como nos slides (exemplo com 2 telefones e uma central)
+
+

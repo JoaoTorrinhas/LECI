@@ -1,0 +1,19 @@
+multicast:
+	-pims
+	-
+
+
+
+SPT:
+	definir a raiz como o sw central
+
+mpls:
+	-saber o q cada protocolo faz
+	-Vantagens MPLS: encaminhamento mais rápido, reservas de largura de banda e definir nós do caminho
+	-LDP: vai à tabela de encaminhamento, pega na lista de redes atribui um label, cria uma lista, poe na sua tabela mpls e envia para os vizinhos 
+
+Pim DENSE: por default os routers enviam para todo o lado e quem não quiser diz que não quer.
+Pim sparse: quem quer tem de dizer que quer ao RP e depois o RP encaminha para o destino
+
+arquiteturas:
+	-quanto muito explicar o 5g (diferenças/vantagens) e explicar sincrono e assincrono

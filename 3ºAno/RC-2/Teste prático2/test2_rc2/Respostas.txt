@@ -1,0 +1,40 @@
+1.
+	-V
+	-V
+	-F
+	-F
+2.
+	-V
+	-F (1008)
+	-F (TCP)
+	-F (200)
+3.
+	-V
+	-V
+	-V (Supostamente verdadeiro pelo valor do weight)
+	-Não dá para ver mas se for 2001 é verdadeira
+4.
+	-V
+	-V
+	-F, se fosse agreggated devia ser do 2002
+	-F, (pq é incomplete)
+5.
+	-V, no packet2 pode vir um update ou mais, depende do numero de rotas que falham
+	-F, essa endereço de rede está available
+	-F, o contrário da de cima
+	-F, pertence ao 2002
+6.
+	-V
+	-V (Em ultimo caso, no teste meto as duas verdadeiras ou as duas falsas xD)
+	-V (Em ultimo caso, no teste meto as duas verdadeiras ou as duas falsas xD)
+	-F, é preciso bgp filtering
+7.
+	-V
+	-F, (192.3.95.5)
+	-F, (Para ser disconnecting tinha de ser o BYE)
+	-F, (Varadas)
+8.
+	-V
+	-F, (192.47.25.4)
+	-F, (só se CSeq do packet2 for um register)
+	-V

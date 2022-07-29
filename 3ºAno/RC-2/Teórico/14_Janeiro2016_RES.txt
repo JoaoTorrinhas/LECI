@@ -1,0 +1,42 @@
+1.
+	Inicialmente são trocadas mensagens tcp (SYN, SYN ACK, ACK) para estabelecer a comunicação entre ambos. Depois são trocadas as mensagens open para se estabelecer a sessão BGP.Depois são trocadas mensagens update para anunciar para cada um as redes que aprenderam. Posto isto, são trocadas mensagens keep alive, para manter a sessão ligada, à espera de updates que possam eventualmente aparecer, por exemplo, caso alguma interface for shutdown.
+
+2.
+	a)
+		BGP filtering. Se no AS PATH contiver o AS pertencente ao operador turco ou ao operador russo, a rota não é anunciada para a rede do japão.
+
+	b)
+		O operador teria de aumentar o valor do local preference no vizinho sem limitações de tráfego.
+
+	c)
+		O operador teria de aumentar o valor do local preference no vizinho com a ligação de melhor qualidade.
+
+3.
+	a)
+		O propósito  do LDP é a descoberta  de LSR (Label  Switching  Routers) vizinhos  e com eles  definir LSP(Label Switched Path)s para todas as redes IP conhecidas. O LDP no processo de descoberta de LSR vizinhos usa   mensagens  Hello  (UDP)   enviadas   em   multicast.  Após   a  descoberta   de   um   vizinhos,   um  router   cria   e mantém   uma   sessão   LDP   usando   mensagens  Initialization  e  KeepAlive.   De   seguida   usando   mensagensAddress anuncia os endereços IP dos seus interfaces. Depois, para cada rede IP que conhece escolhe um label e  anuncia-o   para   os   vizinhos   usando   mensagens  Label Mapping.  Existem   ainda   outras   mensagens   deadvertisment de labels e notificação de erros.
+
+	b)
+		O LDP não pode ser usado para o estabelecimento de tuneis MPLS com reserva de banda e caminho pré-definido, porque não suporta reserva de recursos e engenharia de tráfego.
+
+	c) 
+		Os mecanismos/protocolos que deverão ser ativados na rede do operador, para que este possa fornecer como serviço aos seus clientes o estabelecimento de ligações virtuais com largura de banda garantida é necessário atiar o protocolo RSVT-TE em todos as interfaces do dominio MPLS, definindo a largura de banda reservável no total e por fluxo. Igualmente é preciso ativar as extensões TE de um protocolo igp para propagar a informação sobre as capacidades das diferentes interfaces.
+
+	d)
+		Não vem
+	
+	e)
+		Não vem
+
+4.
+	a)
+		Acho que tb não vem	
+		
+	b)
+		Já resolvi
+
+	c)
+		Não vem	
+
+	d)
+		Não vem
+		
