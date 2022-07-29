@@ -1,0 +1,29 @@
+1.V
+2.V , são verificadas na atualização
+3.F, método preventivo
+4.V
+5.F, pelo menos um deles tem de ser write
+6.V? not sure. Ele pode retornar record-sets mas não tenho a certeza se podem ser usados na clausula from
+7.F, quando insere elementos
+8. não vem
+9.V
+10.F, contem os tuplos antes do update
+11.F, marca no transaction log qnd os buffers são escritos no disco
+12.F, pode ser usado
+13.V
+14.F, são executados uma vez por cada operação
+15.V
+16.F, isso pode resultar em sql injection, daí usar sp e udfs
+17.V
+18.V , não aceita valores duplicados, por isso presumo que tb não aceite null's duplicados
+19.F, permite saber qnts tuplos foram afetados
+20.F
+
+------------
+A.F, acho q tem de se seguir o processo i,ii,iii,iv. Ou seja, eliminar primeiro os dependentes e assim sucessivamente...
+B.F pq ao eliminar os funcionarios tb temos de eliminar os dependetes, logo deveriamos usar triggers ou sp
+C.F, pq na linha do SELECT @issn = ssn FROM inserted e devia ser FROM deleted
+D.V, os udfs podem retornar inteiros
+E.V
+F.F, acho q são os triggers
+G.F

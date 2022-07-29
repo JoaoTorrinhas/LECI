@@ -1,0 +1,11 @@
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\bin\Debug\Contacts.exe.config
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\bin\Debug\Contacts.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\bin\Debug\Contacts.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.AssemblyReference.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.SuggestedBindingRedirects.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.Form1.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.Properties.Resources.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.GenerateResource.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.CoreCompileInputs.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao7\Aula7_VS_Forms_Material\ContactsC#\Contacts\obj\x86\Debug\Contacts.pdb

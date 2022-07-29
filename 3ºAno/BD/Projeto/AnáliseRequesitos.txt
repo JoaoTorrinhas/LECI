@@ -1,0 +1,25 @@
+REQUESITOS FUNCIONAIS:
+	-O sistema permite aos utilizadores criar uma conta
+	-O sistema permite o login dos utilizadores(clientes)
+	-O admin deve puder consultar informações dos utilizadores 
+	-O admin deve conseguir fazer a gestão da sala de cinema
+	-O sistema deve permitir ao admin registar filmes
+	-O sistema deve deixar os utilizadores(clientes) pesquisar filmes
+	-Cada admin deve ter um nome e um número de funcionário associado a ele (?)
+	-O sistema deve conseguir apagar utilizadores
+	-O admin deve conseguir criar sessões
+	-O admin deve conseguir editar categorias
+	-Os clientes podem comprar bilhetes
+
+REQUESITOS NÃO FUNCIONAIS:
+	-O Sistema deverá permitir até um máximo de 100 palavras na sinopse de um filme
+	-Obrigatório preencher pelo menos um dos campos aquando da pesquisa dos filmes
+	-cartaz devera ter no minimo 4 filmes
+	-filme devera ter no minimo 1 categoria
+	-para haver uma sessao de um filme é necessario pelo menos 1 cliente
+
+
+ADICIONAR NUM_CC A CLIENTE
+-não é preciso o cartaz
+-sala de cinema ligada a uma entidade cinema
+-admin ligado ao cinema

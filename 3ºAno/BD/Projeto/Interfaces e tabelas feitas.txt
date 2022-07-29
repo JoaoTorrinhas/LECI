@@ -1,0 +1,14 @@
+-------------------------------Interfaces--------------------------------
+
+-Adicionar/editar/remover sessões
+-Está feita esta interface mas tem um pequeno bug, quando vamos a editar temos de editar a data primeiro mm/dd/yy em vez de estar dd/mm/yy, secalhar é porque foram introduzidos os valores na tabela sendo dd/mm/yy em vez de mm/dd/yy
+
+-Adicionar/remover/editar categorias de filmes ou filmes
+-Comprar bilhetes (?)
+
+Form1-> Sessoes
+Form2->Pagina admin
+
+-------------------------Tabelas feitas até agora-------------------------
+
+-Todas

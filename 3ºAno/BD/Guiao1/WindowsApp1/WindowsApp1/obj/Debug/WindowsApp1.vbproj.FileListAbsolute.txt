@@ -1,0 +1,13 @@
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Guiao1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources

@@ -1,0 +1,70 @@
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.exe.config
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.AssemblyReference.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.SuggestedBindingRedirects.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Form1.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Properties.Resources.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.GenerateResource.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.CoreCompileInputs.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Form2.resources
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.exe.config
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.exe
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\bin\Debug\Sessoes.pdb
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.AssemblyReference.cache
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.SuggestedBindingRedirects.cache
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Form1.resources
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Form2.resources
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Properties.Resources.resources
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.GenerateResource.cache
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.CoreCompileInputs.cache
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.exe
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.pdb
+C:\Users\Omen\Desktop\Projeto_BD\Sessoes\Sessoes\obj\Debug\Sessoes.Form3.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe.config
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.AssemblyReference.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.SuggestedBindingRedirects.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form1.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form2.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form3.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Properties.Resources.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.GenerateResource.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.CoreCompileInputs.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form4.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe.config
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.pdb
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.AssemblyReference.cache
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.SuggestedBindingRedirects.cache
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form1.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form2.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form3.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form4.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Properties.Resources.resources
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.GenerateResource.cache
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.CoreCompileInputs.cache
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.exe
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.pdb
+C:\Users\Omen\Desktop\Projeto_BD(LASTUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form5.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe.config
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\bin\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.AssemblyReference.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.SuggestedBindingRedirects.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form1.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form2.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form3.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form4.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form5.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Properties.Resources.resources
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.GenerateResource.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.csproj.CoreCompileInputs.cache
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.exe
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.pdb
+C:\Users\jptor\OneDrive\Ambiente de Trabalho\UA-3ºAno\BD\Projeto\Projeto_BD(NEWUPDATE)\Sessoes\Sessoes\obj\Debug\Sessoes.Form6.resources

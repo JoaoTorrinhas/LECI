@@ -1,0 +1,49 @@
+Ex1
+	1-F
+	2-F
+	3-V
+	4-F
+	5-?
+	6-F (not sure)
+	7-F
+	8-V
+	9-V
+	10- Não vem para este AT
+	11-V
+	12-V
+
+Ex2
+	g-1)
+	h-2)
+	i-4)
+
+---------------------------------
+MINI-TESTE
+
+1.1
+	-
+	-V
+	-
+	-
+
+1.2
+	-
+	-
+	-V
+	-F
+----------------------------------
+22-V
+23-V
+24-V
+35-F
+26-F
+28-V
+18-V
+13-F
+15-F
+9-d)
+10-V
+
+-VER A RESOLUÇÃO DO GUIÃO ALGEBRA RELACIONAL
+-VER A CENA DOS OUTROS JOINS
+-FAZER OS EXERCICIOS 1.1, 1.2 DO MINI-TESTE
