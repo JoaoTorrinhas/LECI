@@ -1,0 +1,127 @@
+def best_position_with_second_piece(grid,actualPiece,nextPiece0):
+    #grid é o grid + posição peça atual
+    #nextPiece0 ->  next_pieces[0], onde através da função next_actions achamos as jogadas possíveis para cada rotação
+    scores = []
+    aux = []
+    keys = []
+    max_scores = []
+    positions_actualPiece,actions_actualPiece = next_actions(actualPiece) #jogadas da peça atual já com as posições e as actions correspondentes a essa posição
+    #print("positions_actualPiece:", positions_actualPiece)  
+    #print("actions_actualPiece:", actions_actualPiece)
+    #print(positions_actualPiece)
+    for position in positions_actualPiece:
+        actual_piece_position = position
+        #print(actual_piece_position)
+        last_position = last_Position(grid,actual_piece_position)
+        new_grid = grid + last_position 
+        print("new_grid:", new_grid)
+        positions_nextPiece,_= next_piece_next_actions_(nextPiece0) #calcular as posições da next_piece
+        #print(positions_nextPiece)
+        aux = calculate_score2(positions_nextPiece,new_grid) #calcular os scores (aux) para cada posição da peça seguinte corresponde à posição da peça atual (actual_piece_position)no grid
+        #print(aux)
+        scores.append(aux)  #adicionar os scores (aux) à lista scores com os scores da next_piece corresponde a cada posição da peça atual (lista ->positions_actualPiece)
+    #print("scores:", scores)
+    for score in scores:    #ver os melhores scores da lista scores e adicionar a uma lista max_scores
+        maxScore = max(score)
+        max_scores.append(maxScore)
+    #print("max_scores:", max_scores)  
+    index_max = max(range(len(max_scores)), key=max_scores.__getitem__) #achar o indice com o maior valor de max_scores
+    keys = actions_actualPiece[index_max]   #e substituir nas actions/keys possíveis da peça atual, para achar a melhor peça para a jogada
+    #print("keys:", keys)
+
+    return keys
+
+def calculate_heuristic(game):  #game é o board
+    #calcular o score deste games
+    #FAZER
+    #lines_completed = complete_lines(game,lastPosition)
+    #holes_grid = calculate_holes(game,lastPosition)         
+    #listOfCollumnHeights = Column_heights(game,lastPosition)    
+    #AggregateHeight = Aggregate_Height(listOfCollumnHeights)
+    #Bumpinees = calculate_smotheness(listOfCollumnHeights)
+    #return lines_completed,holes_grid,AggregateHeight,Bumpinees
+    pass
+
+def rotate_next_piece(next_piece):
+    if next_piece == [[2, 1], [2, 2], [3, 2], [3, 3]]:        #"S"  [[4,2], [4,3], [5,3], [5,4]]
+        return [[[4,2], [4,3], [5,3], [5,4]],
+                [[4,2], [5,2], [3,3], [4,3]]]
+    elif next_piece == [[2, 1], [1, 2], [2, 2], [1, 3]]:      #"Z"  [[4,2], [3,3], [4,3], [3,4]]
+        return [[[4,2], [3,3], [4,3], [3,4]],     
+                [[3,2], [4,2], [4,3], [5,3]]]
+    elif next_piece == [[0, 1], [1, 1], [2, 1], [3, 1]]:      #"I"  [[2,2], [3,2], [4,2], [5,2]]
+        return [[[2,2], [3,2], [4,2], [5,2]],     
+                [[4,2], [4,3], [4,4], [4,5]]]
+    elif next_piece == [[1, 2], [2, 2], [1, 3], [2, 3]]:      #"O"  [[3,3], [4,3], [3,4], [4,4]]
+        return [[[3,3], [4,3], [3,4], [4,4]]]
+    elif next_piece == [[2, 1], [3, 1], [2, 2], [2, 3]]:      #"J"  [[4,2], [5,2], [4,3], [4,4]]
+        return [[[4,2], [5,2], [4,3], [4,4]],     
+                [[3,3], [4,3], [5,3], [5,4]],     
+                [[4,2], [4,3], [3,4], [4,4]],     
+                [[3,2], [3,3], [4,3], [5,3]]]
+    elif next_piece == [[2, 1], [2, 2], [2, 3], [3, 3]]:      #"L"  [[4,2], [4,3], [4,4], [5,4]]
+        return [[[4,2], [4,3], [4,4], [5,4]],     
+                [[3,3], [4,3], [5,3], [3,4]],     
+                [[3,2], [4,2], [4,3], [4,4]],     
+                [[5,2], [3,3], [4,3], [5,3]]]
+    elif next_piece == [[2, 1], [2, 2], [3, 2], [2, 3]]:      #"T"  [[4,2], [4,3], [5,3], [4,4]]
+        return [[[4,2], [4,3], [5,3], [4,4]],     
+                [[3,3], [4,3], [5,3], [4,4]],     
+                [[4,2], [3,3], [4,3], [4,4]],     
+                [[4,2], [3,3], [4,3], [5,3]]]
+    #print(piece)
+    return None
+
+def next_piece_next_actions_(next_piece):
+    possible_actions = []
+    possible_positions = []
+    #print(piece)
+    rotations = rotate_next_piece(next_piece)
+    #print(rotations)
+    for i in range(len(rotations)):
+        for action_list in ACTIONS:
+            position = copy.deepcopy(rotations[i])  #posiçao atual
+            for action in action_list:
+                if action == "a":
+                    position = moveLeft(position)
+                elif action == "d":
+                    position = moveRight(position)  #[[1,2],[2,2],[3,2],[4,2]]
+            #print(position)
+            if not out_of_board(position):
+                possible_positions.append(position)
+                possible_actions.append(["w"]*i + action_list)
+    return possible_positions,possible_actions 
+
+def calculate_score2(possible_positions,grid):
+    scores = []
+    #print(possible_positions)
+    for i in range(len(possible_positions)):
+        #grid = [ p.copy() for p in original_grid ]
+        position = possible_positions[i]
+        lastPosition = last_Position(grid,position) 
+        score = calculate_heuristics_and_Score(grid,lastPosition)
+        scores.append(score)
+
+
+    #index_max = max(range(len(scores)), key=scores.__getitem__)
+
+    return scores
+
+def calculate_position_score_and_keys(possible_positions,possible_actions,original_grid):
+    scores = []
+    for i in range(len(possible_positions)):
+        grid = [ p.copy() for p in original_grid ]
+        position = possible_positions[i]
+        lastPosition = last_Position(grid,position) 
+        score = calculate_heuristics_and_Score(grid,lastPosition)
+        scores.append(score)
+    index_max = max(range(len(scores)), key=scores.__getitem__) #achar o indice do valor máximo da lista scores
+    keys = possible_actions[index_max]
+    bestPos = possible_positions[i]
+    #print(keys) 
+    return keys,bestPos       
+
+#a = -80
+    #b = 0.760666
+    #c = -20
+    #d = -0.184483
