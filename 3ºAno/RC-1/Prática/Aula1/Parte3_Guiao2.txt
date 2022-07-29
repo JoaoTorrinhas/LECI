@@ -1,0 +1,8 @@
+Ex7:
+	Se fizermos no pc de esquerda ping 192.1.1.10, o pc da esquerda faz ICMP request para o router, do router faz arp request (para ver se esse ip existe) e como o ip não existe, a arp não envia resposta e o pc da esquerda não recebe nenhuma informação
+
+Ex8:
+	Se fizermos no pc da esquerda ping 192.100.1.1, o pc da esquerda faz ICMP request para o router e como o router sabe que esse ping não é valido, envia ICMP ao pc da esquerda a dizer que o ip do ping é inválido
+
+Ex11:
+	Ao executar o comando ping 192.20.20.150, o router 1 sabe que para ir para a outra rede tem de passar pelo router 2, e executa um arp request na rede entre os dois routers...

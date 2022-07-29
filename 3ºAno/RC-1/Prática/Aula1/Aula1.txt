@@ -1,0 +1,74 @@
+1.1-
+	Wifi:
+		ipv4(endereço privado)- 192.168.100.145
+		Default Gateway(comunicar para fora,deixar ir para outra rede)- 192.168.100.1
+		Default Gateway serve para comunicar com o exterior
+1.2-
+	Nome da máquina- LAPTOP-AC3BODN7
+	DNS-192.168.100.1
+
+2.1-
+	-193.136.173.58
+	-193.136.172.174, 193.136.172.173, 193.136.172.175
+	-193.126.240.138
+	-213.13.146.142
+	-148.69.168.41, 148.69.168.38, 148.69.168.39, 148.69.168.40
+	-94.46.160.176
+	-199.232.82.192
+	- 2a05:d014:9da:8c10:306e:3e07:a16f:a552 3.64.163.50 
+	-2a00:1450:4003:80e::2004 142.250.200.100
+	-2a00:1450:4003:80e::2003 142.250.200.99 
+	- 2a00:1450:4003:80c::2003
+          142.250.184.163
+	-2a00:1450:4003:806::2003
+          216.58.215.163
+
+2.2-
+	-lvs-ng.ua.pt
+	-www.up.pt
+	- edge-star-mini-shv-01-lis1.facebook.com
+	- instagram-p42-shv-01-iad3.fbcdn.net
+2.3-
+	-U porto
+	-facebook
+3-
+	-9 ms
+	-8 ms
+	-9ms
+	-não está a responder a pings
+	-11 ms
+	.
+	.
+	.
+
+4-
+	-6(nossa máquina + 4 + destino), 10.1.0.101
+	-11, 194.210.6.105
+	-12, 193.137.1.18
+	-de momento não dá
+	-12, 193.136.1.18
+	-15, 193.145.14.13
+	-17, 62.40.124.70
+	-13,62.40.98.97
+	-19,87.245.227.58
+	-22,155.232.1.97
+	-24,113.197.15.38
+	-não consegue fazer o trace
+
+5-
+	-endereço privado
+	-194.210.6.105,RIPE Network Coordination Centre,Amsterdam
+	-193.137.1.18, RIPE Network Coordination Centre,Amsterdam
+	-
+	-193.136.1.18,RIPE Network Coordination Centre (RIPE),Amsterdam
+	-
+	-
+
+6-
+	-
+	-194.210.6.105,LISBOA, PORTUGAL
+	-193.137.1.18,
+	-
+	-193.136.1.18,
+
+ping- serve para ver se conseguimos comunicar com a máquina 

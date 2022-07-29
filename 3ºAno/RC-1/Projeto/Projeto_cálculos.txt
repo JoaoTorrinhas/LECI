@@ -1,0 +1,143 @@
+IPv4: 200.143.144.128/25
+IPv6: 2001:88::/60 - 2001:0088:0000:0000:0000:0000:0000:0000/60
+Ipv4 Private: 10.134.0.0/16 class B,
+
+Ip rede vai ser 200.143.144.0/25
+Para os servidores design
+
+Ipv6:
+sh ipv6- comando no terminal
+primeiro usável -  2001:0088:0001:0000:0000:0000:0000:0000/60  
+router: 
+	f 0/0 - 2001:88:1::0/64	
+	f 0/1 - 2001:88:2::0/64
+pc's:
+	design -> 2001:88::1:1/64		default gateway -> FE80::1
+	marketing -> 2001:88::2:1/64		default gateway -> FE80::1
+
+rede - 2001:0088:0000:0000:0000:0000:0000:0000/60 aka  2001:88::/64 - ip que vou definir nos routers
+
+1- tenho de configurar tb o router 0 com a rede privada
+   pc1- 255.255.255.192
+   pc2- 255.255.255.224
+
+   Design    55 hots/servers -> 2^6 = 64  
+	200    143    144    128    /26    -> rede 
+	200    143    144    129 	->primeiro usável        
+	200    143    144    130
+	200    143    144    190	->ultimo usável 
+	200    143    144    191  	->brodcast      
+	200    143    144    192	->prox rede(markting)           
+   Marketing  29 hots/servers -> 2^5 = 32    /27
+	200    143    144    193	->primeiro usável
+	200    143    144    222	->ultimo usável
+	200    143    144    223	->brodcast
+	200    143    144    224	->prox rede
+	
+	200    143    144    255    Brodcast      
+	
+   private ipv4:
+   DESIGN(PC3)->
+	10.134.0.1/24	usamos /24 pq é da classe C
+	gateway: 10.134.0.254
+   MARKETING(PC4)->
+	10.134.1.1/24
+	gateway: 10.134.1.254		/24 pq (em principio) precisamos dos 100 ranges do dhcp
+	
+   private network R0-R1:  10.134.0.0/30	32-30=2  2^2= 4 hosts
+   10.134.0.0/30 -> Rede
+   10.134.0.1/30 -> primeiro usável
+   10.134.0.2/30 -> segundo usável
+   10.134.0.3/30 -> Broadcast
+
+   10.134.2.1/30 -> primeiro usável	R0
+   10.134.2.2/30 -> segundo usável	R1 por causa do dhcp, .0 para o design e .1 para o marketing
+	
+
+
+
+   Configurar a rede entre R1 e Isp: 
+   ipv4:
+   220.3.4.4/30 -> Rede
+   220.3.4.5/30 -> Primeiro usável
+   220.3.4.6/30 -> Segundo usável e último
+   220.3.4.7/30 -> Broadcast
+
+   ipv6:
+   2200:0003:0004:0004:0000:0000:0000:0004 - 2200:0003:0004:0004:0000:0000:0000:0007
+   2200:0003:0004:0004:0000:0000:0000:0005 - 2200:0003:0004:0004:0000:0000:0000:0006  
+	
+   Configurar a rede entre ISP-INTERNET
+   2300:000a:000a:000a:0000:0000:0000:0000 - 2300:000a:000a:000a:ffff:ffff:ffff:ffff
+   2300:000a:000a:000a:0000:0000:0000:0001 - 2300:000a:000a:000a:ffff:ffff:ffff:fffe
+   203.0.0.1/24 - 203.0.0.254/24 
+
+	
+
+3- 
+	11 não é múltiplo de 4 logo o próximo é 16, 2^4=16
+	200.143.144.128/26
+	200.143.144.129/26 	->usar este
+		...
+	200.143.144.140/26	->até este
+	200.143.144./28
+	200.143.144.15/28	-> broadcast
+	200.143.144.16/28	-> para outra rede
+
+	255.255.255.255 - 255.255.255.192 para a wild_mask comando
+
+	configurar o nat pat com os 11 ip's
+	privado -> publico
+	Router 1:
+	inside->f 1/0
+	outside-> f 1/1
+
+5-
+	R0(-Internet):ip route 203.0.0.0 255.255.255.0 10.134.2.2
+	->R0(-Internet/default):ip route 0.0.0.0 0.0.0.0 10.134.2.2
+	
+	R1(-ISP):ip route 203.0.0.0 255.255.255.0 220.3.4.6
+	R1(-designPriv):ip route 10.134.0.0 255.255.255.0 10.134.2.1
+	R1(-marketingPriv):ip route 10.134.1.0 255.255.255.0 10.134.2.1
+	R1(-design):ip route 200.143.144.128 255.255.255.192 10.134.2.1
+	R1(-marketing):ip route 200.143.144.192 255.255.255.224 10.134.2.1
+	->R1(-ISP/default):ip route 0.0.0.0 0.0.0.0 220.3.4.6
+	->R1(/default):ip route 0.0.0.0 0.0.0.0 10.134.2.1
+	
+	ISP(-designPriv):ip route 10.134.0.0 255.255.255.0 220.3.4.5 -----Não é preciso
+	ISP(-design):ip route 200.143.144.128 255.255.255.192 220.3.4.5
+	ISP(-marketing):ip route 200.143.144.192 255.255.255.224 220.3.4.5
+	ISP(-R1):ip route 200.143.144.224 255.255.255.224 220.3.4.5
+	->ISP(/default):ip route 0.0.0.0 0.0.0.0 220.3.4.5
+	
+	(alterar os valores para os nossos)
+	R0:
+	ipv6 route 2300:A:A:A::/64 2001:88:0:2::2 (CERTO)
+	R1:
+	ipv6 route 2001:88::/64 2001:88:0:2::1 (design)	(CERTO)
+	ipv6 route 2001:88:0:1::/64 2001:88:0:2::1 (marketing)	(CERTO)
+	ipv6 route 2300:A:A:A::/64 2200:3:4:4::6 (internet) (CERTO)
+	ISP:
+	ipv6 route 2001:88::/64 2200:3:4:4::5 (design)
+	ipv6 route 2001:88:0:1::/64 2200:3:4:4::5 (marketing)
+
+
+Explicação:
+	design:2001:88::1/64 = 2001:0088:0000:0000:0000:0000:0000:0001
+	prefixo->2001:0088:0000:0000::
+	marketing -> 2001:0088:0000:0001:0000:0000:0000:0001 (mesma rede, mas sub-rede diferente logo temos de mudar no prefixo)
+	
+	mascara -> 2001:0088:0000:0000|:0000:0000:0000:0001 -> /64 prática mais comum, alterar últimos 4 bits da rede, para sub-net.
+		   2001:0088:0000:000|0:0000:0000:0000:0001 -> /60
+
+Possíveis ajustes:
+	-nos routers adicionar o comando ipv6 enable para cada ip
+
+7/8- Servidor vai estar na vm do design (200.143.144.130) e a outra vm (vm do marketing) é para ver o site que vai ser processado pela vm do design
+	-Para a vm do design:
+		sudo ip addr add 200.143.144.130/26 dev enp0s3
+		sudo ip route add default via 200.143.144.190
+	-Para a vm do marketing:
+		sudo ip addr add 200.143.144.194/27 dev enp0s3
+		sudo ip route add default via 200.143.144.222
+

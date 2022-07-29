@@ -1,0 +1,63 @@
+Dec 14 15:16:28.497 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 14 15:16:28.498 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 54282.
+Dec 14 15:16:28.898 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 14 15:16:28.899 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips 
+Dec 14 15:16:28.908 GENERAL: working_dir=C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips
+Dec 14 15:16:28.910 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips\473e207b-de9e-4ec1-86e4-c5eb86110cd5 
+Dec 14 15:16:28.911 GENERAL: working_dir=C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips\473e207b-de9e-4ec1-86e4-c5eb86110cd5
+Dec 14 15:16:28.911 HYPERVISOR: exec_cmd: vm create R1 2 c7200 
+Dec 14 15:16:28.916 VM: VM R1 created.
+Dec 14 15:16:28.917 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5002 
+Dec 14 15:16:28.917 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Dec 14 15:16:28.918 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:16:28.918 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Dec 14 15:16:28.920 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Dec 14 15:16:28.921 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Dec 14 15:16:28.925 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/jptor/GNS3/images/IOS/c7200-jk9o3s-mz.123-8.T.bin 
+Dec 14 15:16:28.927 HYPERVISOR: exec_cmd: c7200 set_mac_addr R1 ca02.41f4.0000 
+Dec 14 15:16:28.928 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Dec 14 15:16:28.929 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Dec 14 15:16:28.930 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:16:28.931 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Dec 14 15:16:28.932 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:16:28.933 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Dec 14 15:16:28.934 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:16:28.935 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Dec 14 15:16:32.466 HYPERVISOR: exec_cmd: nio create_udp udp-300a6ad2-f280-4523-913d-7a3d1e7d7b81 20008 127.0.0.1 20009 
+Dec 14 15:16:32.769 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 1 udp-300a6ad2-f280-4523-913d-7a3d1e7d7b81 
+Dec 14 15:16:32.771 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:16:33.522 HYPERVISOR: exec_cmd: nio create_udp udp-03bcb0fd-cc9a-4272-86ba-d39d34dbd86d 20022 127.0.0.1 20023 
+Dec 14 15:16:33.534 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-03bcb0fd-cc9a-4272-86ba-d39d34dbd86d 
+Dec 14 15:16:33.536 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:17:04.290 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 14 15:17:04.296 VM: VM Ghost created.
+Dec 14 15:17:04.299 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/jptor/GNS3/images/IOS/c7200-jk9o3s-mz.123-8.T.bin 
+Dec 14 15:17:04.299 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 14 15:17:04.301 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips\c7200-jk9o3s-mz.123-8.T.bin-512.ghost 
+Dec 14 15:17:04.302 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 14 15:17:04.303 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 14 15:17:04.308 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Dec 14 15:17:04.309 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 14 15:17:04.890 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 14 15:17:04.892 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 14 15:17:05.044 VM: VM Ghost shutdown.
+Dec 14 15:17:05.046 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Dec 14 15:17:05.052 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 14 15:17:05.052 VM: VM Ghost destroyed.
+Dec 14 15:17:05.076 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Dec 14 15:17:05.077 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\Users\jptor\GNS3\projects\Projeto RC-1\Projeto\project-files\dynamips\c7200-jk9o3s-mz.123-8.T.bin-512.ghost 
+Dec 14 15:17:05.079 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:17:05.087 HYPERVISOR: exec_cmd: vm set_config R1 configs\i2_startup-config.cfg 
+Dec 14 15:17:05.088 HYPERVISOR: exec_cmd: vm start R1 
+Dec 14 15:17:35.749 HYPERVISOR: exec_cmd: vm extract_config R1 
+Dec 14 15:25:08.719 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:25:08.720 HYPERVISOR: exec_cmd: vm stop R1 
+Dec 14 15:25:08.907 VM: VM R1 shutdown.
+Dec 14 15:25:08.908 HYPERVISOR: exec_cmd: vm extract_config R1 
+Dec 14 15:25:09.753 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 14 15:25:09.755 HYPERVISOR: exec_cmd: vm extract_config R1 
+Dec 14 15:25:09.760 HYPERVISOR: exec_cmd: vm delete R1 
+Dec 14 15:25:09.760 VM: VM R1 destroyed.
+Dec 14 15:25:09.763 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 14 15:25:09.957 HYPERVISOR: Stopped.
+Dec 14 15:25:09.957 GENERAL: reset done.

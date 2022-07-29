@@ -1,0 +1,8 @@
+9)
+arp -a
+arp -d 192.1.1.14
+arp -a
+ping 192.1.1.14 (vemos que há arps)
+fazer ping novamente (não é necessário arps)
+arp -d 192.1.1.14 
+ping 192.1.1.14 (volta a precisar de de fazer arps)

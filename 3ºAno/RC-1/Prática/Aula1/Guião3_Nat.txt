@@ -1,0 +1,18 @@
+Ex2:
+	0 pacotes tiveram o seu endereço ip "translated"	
+Ex3:
+	Continua a dar 0 pacotes "translated"
+	Há dois ip's privados e um ip público, se um dos ip's privados pingar para o público, o outro não o consegue fazer pq o ip público já está a ser pingado pelo outro privado.	
+Ex4:
+	Como achar o tempo que demora? 60ms (Solar Putty numbers)?
+	
+Ex6:
+	Para o PC2 diz destination host unreachable
+
+Ex8: 
+ 	Uma maneira de a rede privada estar acessível à rede pública, o endereço público pinga para um ip que se encontra dentro da rede privada mas o msm não sabe que está dentro de uma rede privada, o router apenas contêm o ip para puder realizar essa operação
+
+DHCP:
+
+Ex9:
+	
