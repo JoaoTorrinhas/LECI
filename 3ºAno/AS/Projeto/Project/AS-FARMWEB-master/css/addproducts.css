@@ -1,0 +1,56 @@
+/*Login form*/
+bodyadmin{
+	margin-top: 80px;
+	background: white;
+	display: flex;
+	font-family: 'Courier New', Courier, monospace;
+}
+.containeradmin{
+	margin: auto;
+	width: 700px;
+	max-width: 100%;
+}
+
+.containeradmin form{
+	width: 700px;
+	height: 650px;
+	padding: 5px;
+	background: #eee;
+	border-radius: 10px;
+	box-shadow: 0 8px 16px rgba(0,0,0,.3);
+	display:flex;
+	flex-direction: column;
+}
+
+.containeradmin form .form-control{
+	width: 685px;
+	height: 40px;
+	background: white;
+	border-radius: 10px;
+	border: 1px solid silver;
+
+	padding: 0 10px;
+}
+
+.containeradmin form .btnadmin1{
+	margin-top: 2px;
+	margin-left: 260px;
+
+	width: 140px;
+	height: 47px;
+	border: none;
+	outline: none;
+	background: #27a327;
+	cursor: pointer;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 10px;
+	transition: all 0.3s ease 0s;
+}
+
+
+
+.containeradmin form .btnadmin1:hover{
+	opacity: 0.3;
+}

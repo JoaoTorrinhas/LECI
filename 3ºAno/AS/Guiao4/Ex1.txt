@@ -1,0 +1,8 @@
+-No aplicativo iOS do lojista, o usuário (cliente) clica no botão Checkout with Apple Pay .
+-A estrutura PassKit se conecta ao servidor Apple e recebe dados de pagamento criptografados no formato JSON
+-O aplicativo IOS cria uma solicitação CreditCardAuth incluindo AppleTransactionId, EphemeralPublicKey, PublicKeyHash, Signature e Encrypted Token Value
+-O aplicativo iOS chama o Serviço de Pagamento para CreditCardAuth.
+-O Serviço de Pagamento usa o arquivo .cer e o arquivo p12 fornecido pelo comerciante, juntamente com a chave pública efêmera passada na chamada da API, para descriptografar os dados de pagamento.
+-O Serviço de Pagamento processa a solicitação como uma transação normal de Cartão Não Presente e retorna uma resposta de sucesso ou falha.
+-O aplicativo iOS recebe a resposta de sucesso ou falha e avisa o usuário de acordo
+

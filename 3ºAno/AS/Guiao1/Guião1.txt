@@ -1,0 +1,4 @@
+Existe um estado inicial e a esse mesmo estado vai estar associada uma ação, receive order. Depois vai haver uma decisão onde vão estar associadas duas condições de acesso, order accepted e order rejected, se uma condição for verdadeira é para onde o fluxo segue. Quando entra "dentro das barras", há dois fluxos que vão executar em paralelo onde o (invoice) é uma entidade de informação, send invoice vai escrever na entidade invoice, e o accept payment vai ver o conteudo dessa entidade. Só se fecha a order quando os dois fluxos, imediatamente antes da última barra, estiverem prontos ao mesmo tempo (join), sincronizando os fluxos.
+
+
+

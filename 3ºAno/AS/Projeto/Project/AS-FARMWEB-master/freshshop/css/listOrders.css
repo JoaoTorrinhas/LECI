@@ -1,0 +1,132 @@
+sectionvalidate{
+
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardvalidate{
+
+    background-color: rgb(225, 255, 208);
+    width: 800px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.cardvalidate_hero{
+
+    position: relative;
+}
+
+.cardvalidate_img{
+
+    display: block;
+    width: 150px;
+}
+
+.cardvalidate_middle{
+    position: absolute;
+    top:75%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+
+.cardvalidate_middle-text{
+    background-color: rgb(240, 240, 240);
+    padding: 10px 22px;
+    border-radius: 10px;
+}
+
+.cardvalidate_content{
+
+    flex:1;
+    margin-left: 20px;
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.cardvalidate_content2{
+
+    flex:1;
+    margin-left: -200px;
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.cardvalidate_info{
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cardvalidate_raca{
+
+    font-size: 14px;
+}
+.te{
+    margin-left: 20%;
+}
+
+.track{
+    margin-left: 45%;
+}
+
+.cardvalidate_buttonaccept{
+
+    display:flex;
+    font-size: 22px;
+    color: green;
+    margin-top:-120px;
+    margin-left: 280px;
+    width: 30%;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cardvalidate_buttonreject{
+
+    display:flex;
+    font-size: 22px;
+    color: red;
+    margin-top:-40px;
+    margin-left: 280px;
+    width: 30%;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttonvalidate{
+}
+
+.buttonconcuido{
+    font-size: 35px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hvalidate{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hvalidateanimal{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -20px;
+  margin-left: 55px;
+  margin-bottom: 15px;
+
+}
+
+hvalidateperson{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -20px;
+  margin-left: 55px;
+  margin-bottom: 15px;
+
+}

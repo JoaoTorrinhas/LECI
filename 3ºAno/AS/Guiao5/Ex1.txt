@@ -1,0 +1,16 @@
+5.1
+	a)
+	-No diagrama 1 está representado a gestão de um blog.
+	-A componente ConversionManagement oferece o serviço "FeedProvider" que vai ser utilizado/consumido pela componente BroadCastEngine, o msm acontece para a componente BlogViewer que vai consumir o serviço DisplayConverter que é disponibilizado pela componente ConversionManagement.
+	-Posto isto, a componente BlogDataSource vai disponibilizar o serviço DataSource que, por sua vez, vai ser consumido pela ConversionManagement.
+	-Por fim, a componente Log4j vai fornecer o serviço 'Logger' que vai ser utilizado/consumido pela componente BlogDataSource.
+	
+	
+	b)
+	-Apache Log4j é um utilitário de registro baseado em Java originalmente escrito por Ceki Gülcü. Log4j é uma das várias estruturas de criação de log Java.
+
+	c)
+	implementation 'org.apache.logging.log4j:log4j-1.2-api:2.17.2'
+
+5.2
+	

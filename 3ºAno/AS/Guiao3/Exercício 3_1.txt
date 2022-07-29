@@ -1,0 +1,16 @@
+3.1-
+	a)V, todas as equipas têm de indicar um responsável de equipa que é um professor, mas o objeto professor pode ser ou não.
+	
+	b)V, pela msm justificação de cima
+
+	c)V, Pelo diagrama vemos que várias submissões são efetuadas por 1 equipa e vários alunos pertencem a uma equipa logo, é valido dizer que a submissão é feita por vários alunos.
+	
+	d)F/V, várias submissões são avaliadas por vários membros do CC logo, o que se pretende, pelo diagrama, é que uma submissão seja avaliada por vários membros da CC logo é F mas, eventualmente, a submissão pode ser avaliada por um membro da CC, por causa do * que indica vários, o que indica que a afirmação também poderá ser V.
+
+	e)F, várias equipas pertecem apenas a uma instituição logo, uma equipa pertence apenas a uma instituição.
+
+	f)F, vários membros CC tem experiência em várias linguagem e logo um membro do CC pode ter experiência em várias linguagens. Sabe-se também que várias submissões são efetuadas por uma das linguagem que o MEmbro do CC tem experiência. Logo é falso porque o diagrama não tem capacidade expressiva para dizer que um Membro do CC SÓ pode avaliar entregas resolvidas com linguagens de programação para as quais é especialista/tem experiência, ele pode avaliar outras.
+
+	g)F, Pelo diagrama vemos que a submissão/entrega é feita por uma equipa mas não esclarece se é feito pelo responsável ou não, o diagrama não tem capacidade expressiva.
+
+	h)V, vários docentes estão associados a várias submissões, logo é verdade que um submissão possa estar associada a Membros do CC e esses mesmos membros são Professores/Docentes.
