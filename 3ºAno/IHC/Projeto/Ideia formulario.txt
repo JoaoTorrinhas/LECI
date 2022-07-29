@@ -1,0 +1,5 @@
+-Passar dados em json object como no email
+
+data = '{"name":"John", "age":30, "car":null}';
+
+-Para receber os dados na pagina, por exemplo, o "name", basta fazer data.name ou data['name'].

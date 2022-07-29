@@ -1,0 +1,213 @@
+/* navebar de cima */
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 1000;
+  font-size: 25px;
+  color: Black;
+}
+
+li, a , button{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 25px;
+  color: Black;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-color: rgb(191, 240, 162);
+  
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color:white;
+  transition: all 0.3s ease 0s;
+}
+
+button{
+  padding: 9px 25px;
+  background-color:rgb(225, 255, 208);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgb(191, 240, 162);
+}
+
+
+/* parte das imagens com containers de informação no meio*/
+bodydFoundAnimalTwo{
+	display:flex;
+	justify-content: center;
+	background: white;
+}
+
+.containerFoundAnimalTwo{
+
+	position: relative;
+	width:1100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0%;
+}
+
+.containerFoundAnimalTwo .card{
+	width:5000px;
+	position: relative;
+	height: 120px;
+	background: rgb(225, 255, 208);
+	margin:100px 100px;
+	display:flex;
+	flex-direction: column;
+	box-shadow: white;
+	transition: all 0.3s ease 0s;
+	margin-top: 4%;
+  border-radius: 10px;
+}
+.containerFoundAnimalTwo .card .imgBx{
+	position: relative;
+	width:1000px;
+	height: 5000px;
+	top: 25px;
+	left:0px;
+}
+
+
+.containerFoundAnimalTwo .card .imgBx img
+{
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+
+h2{
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
+
+
+.textbox/*texbox class*/
+{
+
+margin-right:20px;/*change the px as per your need*/
+
+}
+
+.combo{
+	padding: 10px;
+}
+
+.fixedButton{
+   position: fixed;
+   bottom: 70px;
+   right: 30px;
+   padding: 20px;
+}
+
+/* ------------------Formulário------------------ */
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Elementos com o ID "titulo" */
+#titulo2 {
+    font-family: sans-serif;
+    color: rgb(191, 240, 162); /* #380B61 */
+    margin-top: -40px;
+
+}
+#subtitulo2 {
+    font-family: sans-serif;
+    color: rgb(191, 240, 162); /* #380B61 */
+
+}
+/* Elementos de tag <fieldset>*/
+fieldsetFA2 {
+    border: 0;
+}
+
+/* Elemento de tag <fieldset1> */
+fieldset2{
+    background-color: rgb(225, 255, 208);
+    font-family: sans-serif;
+    font-size: 1em;
+    color: BLACK; /* #59429d */
+	 margin-left: 17.5%;	/*margin-left: 270px;*/
+    margin-top: -4.5%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 65%;		/*width: 1000px*/
+	 border-radius: 10px;
+}
+
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset2.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+
+/* Elemento de classe "botao" */
+/* Elemento de classe "botao" */
+.botaofoundanimal {
+
+  margin-left: 180px;
+  background-color: rgb(191, 240, 162);
+   
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botaofoundanimal:hover {
+    background: rgb(225, 255, 208);
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botaofoundanimal, select{
+    cursor: pointer;
+}

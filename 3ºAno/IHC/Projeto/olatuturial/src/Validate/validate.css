@@ -1,0 +1,189 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-size: 25px;
+    color: Black;
+  }
+  
+  li, a , button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 25px;
+    color: Black;
+    text-decoration: none;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: rgb(191, 240, 162);
+  
+  }
+  
+  .logo{
+    cursor: pointer;
+  }
+  
+  .nav_links{
+    list-style: none;
+  }
+  
+  .nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav_links li a{
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav_links li a:hover{
+    color:white;
+    transition: all 0.3s ease 0s;
+  }
+  
+  button{
+    padding: 9px 25px;
+    background-color:rgb(225, 255, 208);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  button:hover{
+    background-color: rgb(191, 240, 162);
+  }
+
+
+
+sectionvalidate{
+
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardvalidate{
+
+    background-color: rgb(225, 255, 208);
+    width: 800px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.cardvalidate_hero{
+
+    position: relative;
+}
+
+.cardvalidate_img{
+
+    display: block;
+    width: 150px;
+}
+
+.cardvalidate_middle{
+    position: absolute;
+    top:75%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+
+.cardvalidate_middle-text{
+    background-color: rgb(240, 240, 240);
+    padding: 10px 22px;
+    border-radius: 10px;
+}
+
+.cardvalidate_content{
+
+    flex:1;
+    margin-left: 20px;
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.cardvalidate_content2{
+
+    flex:1;
+    margin-left: -200px;
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.cardvalidate_info{
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cardvalidate_raca{
+
+    font-size: 14px; 
+}
+
+.cardvalidate_buttonaccept{
+
+    display:flex;
+    font-size: 22px;
+    color: green;
+    margin-top:-120px;
+    margin-left: 280px;
+    width: 30%;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cardvalidate_buttonreject{
+
+    display:flex;
+    font-size: 22px;
+    color: red;
+    margin-top:-40px;
+    margin-left: 280px;
+    width: 30%;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttonvalidate{
+}
+
+.buttonconcuido{
+    font-size: 35px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hvalidate{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hvalidateanimal{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -20px;
+  margin-left: 55px;
+  margin-bottom: 15px;
+
+}
+
+hvalidateperson{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -20px;
+  margin-left: 55px;
+  margin-bottom: 15px;
+
+}
+
+
+

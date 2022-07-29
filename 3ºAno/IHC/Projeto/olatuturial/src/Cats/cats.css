@@ -1,0 +1,349 @@
+/* navebar de cima */
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 1000;
+  font-size: 25px;
+  color: Black;
+}
+
+li, a , button{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 25px;
+  color: Black;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-color: rgb(191, 240, 162);
+  
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color:white;
+  transition: all 0.3s ease 0s;
+}
+
+button{
+  padding: 9px 25px;
+  background-color:rgb(225, 255, 208);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgb(191, 240, 162);
+}
+
+/*botoes cao e gato*/
+
+.btn{
+  border: 1px solid rgb(191, 240, 162);
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+
+}
+
+.btn1{
+  border: 1px solid rgb(191, 240, 162);
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+}
+
+.btn2{
+  color: black;
+}
+
+.btn1:hover, .btn2:hover{
+  color: #fff;
+}
+
+
+
+/* navebar de baixo da redes sociais*/
+
+.redesbaixoDogs{
+  background-color: white;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0px 10%;
+  justify-content: space-between;
+  
+}
+.redesidonDogs{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+/* parte das imagens com containers de informação no meio*/
+bodydDogs{
+    display:flex;
+    justify-content: center;
+    background: white;
+}
+
+.containerDogs{
+
+    position: relative;
+    width:1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.containerDogs .card{
+    width:300px;
+    position: relative;
+    height: 400px;
+    background: rgb(114, 110, 110);
+    margin:100px 100px;
+    display:flex;
+    flex-direction: column;
+    box-shadow: white;
+    transition: all 0.3s ease 0s;
+    margin-top: 2%;
+  border-radius: 10px;
+}
+.containerDogs .card .imgBx{
+    position: relative;
+    width:260px;
+    height: 260px;
+    top: 20px;
+    left:20px;
+    
+}
+
+.containerDogs .card .imgBx img
+{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+h2{
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
+
+.cao{
+  clip-path: circle();
+  
+}
+
+.gato{
+  clip-path: circle();
+}
+
+section{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+section ul li{
+  list-style: none;
+  background: #eee;
+  padding: 12px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+section ul li.active{
+  background: #03a9f4;
+  color: #fff;
+}
+
+.product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product .itemBox{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  display: block;
+}
+
+.product .itemBox img{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerdif{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: -3%;
+}
+
+.btn-2{
+  width: 200px;
+  height: 80px;
+  border: none;
+  color: black;
+  border-radius:4px;
+  transition: ease-out 0.3s;
+  outline: none;
+  border: 3px solid rgb(191, 240, 162);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-2:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-2:before{
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: rgb(191, 240, 162);
+}
+.btn-2:hover:before{
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* containers para as caixas com cada animal */
+
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+.containerAnimalBox{
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.cardAnimalBox{
+background: rgb(225, 255, 208);
+width: 270px;
+margin: 10px;
+border-radius: 15px;
+}
+
+.cardAnimalBox-image{
+background-color: rgb(225, 255, 208);
+height: 200px;
+margin-bottom: 15px;
+background-size: cover;
+border-radius: 15px;
+}
+.cardcat-1{
+  background-image: url('https://www.petz.com.br/blog/wp-content/uploads/2017/04/comportamento-dos-gatos-1.jpg');
+}
+.cardcat-2{
+  background-image: url('https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info');
+}
+.cardcat-3{
+  background-image: url('https://www.petz.com.br/blog/wp-content/uploads/2019/06/tamanho-de-gato.jpg');
+}
+.cardcat-4{
+  background-image: url('https://s2.glbimg.com/hlQlwS8DLeHdjF1qhQKA7SSh7R4=/e.glbimg.com/og/ed/f/original/2022/03/08/img3-gatos-sem-pelos-descubra-6-racas-de-felinos-pelados-site.jpg');
+}
+.cardcat-5{
+  background-image: url('https://static1.patasdacasa.com.br/articles/6/80/6/@/16646-o-gato-bengal-e-uma-raca-que-parece-um-l-opengraph_1200-2.jpg');
+}
+.cardcat-6{
+  background-image: url('https://blog.mascotaysalud.com/wp-content/uploads/2018/10/gato-viejo.jpg');
+}
+
+.cardAnimalBox h2{
+  padding: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cardAnimalBox p {
+  padding: 10px;
+}
+
+.cardAnimalBox a{
+  background-color: rgb(69, 69, 69);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 40px;
+}
+
+.cardAnimalBox:hover{
+  background-color: rgb(191, 240, 162);
+  color:black;
+  transform: scale(1.03);
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+

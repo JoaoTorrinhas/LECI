@@ -1,0 +1,457 @@
+.container-slider {
+  max-width: 700px;
+  height: 500px;
+  margin: -80px auto 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 700px){
+  .container-slider {
+    margin: 100px 10px 0;
+  }
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.active-anim {
+  opacity: 1;
+}
+
+.btn-slide {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-slide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-60%);
+}
+.next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-60%);
+}
+
+
+.container-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: #f1f1f1;
+}
+.dot.active {
+  background: rgb(32, 32, 32);
+}
+
+/* navebar de cima */
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 1000;
+  font-size: 25px;
+  color: Black;
+}
+
+li, a , button{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 25px;
+  color: Black;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-color: rgb(240,240,240);
+  
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color:red;
+  transition: all 0.3s ease 0s;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgb(225,225,225);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgb(240,240,240);
+}
+
+/*botoes cao e gato*/
+
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+
+}
+
+.btn1{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+}
+
+.btn2{
+  color: black;
+}
+
+.btn1:hover, .btn2:hover{
+  color: #fff;
+}
+
+
+
+/* navebar de baixo da redes sociais*/
+
+.redesbaixoSlider{
+  background-color: white;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0px 10%;
+  justify-content: space-between;
+  
+}
+.redesidonSlider{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+/* parte das imagens com containers de informação no meio*/
+bodydSlider{
+	display:flex;
+	justify-content: center;
+	background: white;
+}
+
+.containerSlider{
+
+	position: relative;
+	width:1100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0%;
+}
+
+.containerSlider .card{
+	width:350px;
+	position: relative;
+	height: 400px;
+	background: rgb(225, 255, 208);
+	margin:100px 100px;
+	display:flex;
+	flex-direction: column;
+	box-shadow: white;
+	transition: all 0.3s ease 0s;
+	margin-top: 2%;
+  border-radius: 10px;
+}
+.containerSlider .card .imgBx{
+	position: relative;
+	width:450x;
+	height: 260px;
+	top: 70px;
+	left:0px;
+	
+}
+
+.containerSlider .card .imgBx img
+{
+	max-width: 50%;
+	border-radius: 10px;
+}
+
+/* card para imagem nos sliders da pessoa que possui o animal*/
+.containerSlider .cardHolder{
+	width:350px;
+	position: relative;
+	height: 400px;
+	background: rgb(225, 255, 208);
+	margin:100px 100px;
+	display:flex;
+	flex-direction: column;
+	box-shadow: white;
+	transition: all 0.3s ease 0s;
+	margin-top: 2%;
+  border-radius: 10px;
+}
+
+.containerSlider .cardHolder .textHolder{
+	position: relative;
+	width:450x;
+	height: 260px;
+	top: 20px;
+	left:0px;
+	
+}
+
+.containerSlider .cardHolder .imgBxHolder{
+	position: relative;
+	width:450x;
+	height: 260px;
+	top: 20px;
+	left:90px;
+	
+}
+
+.containerSlider .cardHolder .imgBxHolder img
+{
+	max-width: 50%;
+	border-radius: 10px;
+}
+
+/**/
+
+h2{
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
+
+.cao{
+  clip-path: circle();
+  
+}
+
+.gato{
+  clip-path: circle();
+}
+
+/* hide radio buttons, but still expose them to screen readers */
+
+
+.selector {
+  display: grid;
+  grid-template-areas:
+    'happy lovers'
+    'pick  pick';
+}
+
+/* the cards and toggle buttons are actually fat labels that can be clicked to set radio buttons */
+/*label {
+  display: block;
+  cursor: pointer;
+}
+*/
+
+.happy-card, .lovers-card {
+  position: relative; /* for iOS */
+  width: 350px;
+  padding: 20px;
+  color: #586875;
+  background-color: rgb(225, 255, 208);
+  box-shadow: 0 10px 20px #0006;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out; /* important to use a symmetrical timing function (linear also works) */
+  animation-fill-mode: forwards;
+  top: 15%;
+}
+
+.happy-card {
+  grid-area: happy;
+  margin-right: -10px; /* nudge closer to lover's card */
+  
+  /* these values are used to animate via translateX */
+  --swing: -25px;
+  --overlap: 25px;
+}
+
+.lovers-card {
+  grid-area: lovers;
+  margin-left: -10px; /* nudge closer to happy card */
+
+  /* these values are used to animate via translateX */
+  --swing: 25px;
+  --overlap: -25px;
+}
+
+/* when a radio button is set, swing the corresponding card fowards */
+#happy-radio:checked ~ .selector .happy-card,
+#lovers-radio:checked ~ .selector .lovers-card {
+  animation-name: swing-forwards;
+}
+
+@keyframes swing-forwards {
+  0% {
+    z-index: 1; /* start behind other card */
+    transform: scale(0.9);
+  }
+  50% {
+    transform: translateX(var(--swing));
+  }
+  100% {
+    z-index: 2; /* end in front of other card */
+    transform: translateX(var(--overlap)) scale(1.1);
+  }
+}
+
+/* when a radio button is set, swing the opposite card backwards */
+#happy-radio:checked ~ .selector .lovers-card,
+#lovers-radio:checked ~ .selector .happy-card {
+  animation-name: swing-backwards;
+}
+
+@keyframes swing-backwards {
+  0% {
+    z-index: 2;  /* start in front of other card */
+    transform: translateX(var(--overlap)) scale(1.1);
+  }
+  50% {
+    transform: translateX(var(--swing));
+  }
+  100% {
+    z-index: 1; /* end behind other card */
+    transform: scale(0.9);
+  }
+}
+
+h20 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #bdd6d2;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ul {
+  margin: 15px 0;
+  padding-left: 30px;
+  line-height: 1.5rem;
+  list-style-type: square;
+}
+
+
+
+
+.happy-pick, .lovers-pick {
+  grid-area: pick;
+  margin: 100px auto 0;
+  padding: 15px;
+  border: 1px solid #f4f7f7;
+  border-radius: 9999px;
+  background-color: rgb(225, 255, 208);
+  font-size: 1.25rem;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.happy-pick::before, .lovers-pick::after {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+}
+
+.happy-pick::before {
+  margin-right: 10px;
+  content: '\f0a8'; /* fa-arrow-circle-left */
+}
+
+.lovers-pick::after {
+  margin-left: 10px;
+  content: '\f0a9'; /* fa-arrow-circle-right */
+}
+
+/* hide happy toggle button if happy is currently selected */
+#happy-radio:checked ~ .selector .happy-pick {
+  display: none;
+}
+
+/* hide lover's toggle button if lover's is currently selected */
+#lovers-radio:checked ~ .selector .lovers-pick {
+  display: none;
+}
+
+/* increase overlap and swing distance on smaller screens */
+@media (max-width: 560px) {
+  .happy-card {
+    margin-right: -85px;
+    --swing: -100px;
+  }
+
+  .lovers-card {
+    margin-left: -85px;
+    --swing: 100px;
+  }
+}
+
+
+
+
+
+
+

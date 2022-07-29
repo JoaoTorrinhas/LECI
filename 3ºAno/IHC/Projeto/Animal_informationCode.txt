@@ -1,0 +1,425 @@
+import React from "react";
+import "./foundAnimal.css";
+
+export default function FoundAnimal() {
+
+	return (
+		<body>
+			<header>
+				<h1><a href="http://localhost:3000"><button>WebApp</button></a></h1>
+				<nav>
+					<ul class="nav_links">
+						<li><a href="http://localhost:3000/AdoptAnimal">  Adopt Animal</a></li>
+						<li><a href="http://localhost:3000/Donate">  Donate</a></li>
+						<li><a href="http://localhost:3000/FoundAnimal">  Found Animal</a></li>
+					</ul>
+				</nav>
+				<a class="cta" href="http://localhost:3000/Admin"><button>Admin</button></a>
+			</header>
+
+			<bodydFoundAnimal>
+				<div class="containerFoundAnimal">
+					<div class="card">
+						<div class="imgBx">
+							<center><h3>Thank you for helping the animals!</h3></center>
+							<center><h3>Fill in the form below with your information and the animal as well!</h3></center>
+							<center><h3>And wait for the admin's validation.</h3></center>
+						</div>
+					</div>
+
+				</div>
+			</bodydFoundAnimal>
+
+
+
+			<fieldset1>
+				<form>
+					<div>
+						<h1 id="titulo">O seu Formulário</h1>
+						<p id="subtitulo">Complete as suas informações e as do animal</p>
+						<br />
+					</div>
+					<fieldsetFA class="grupo">
+						<div class="campo">
+							<label for="nome"><strong>Nome </strong></label>
+							<input type="text" name="nome" id="nome" required/>
+						</div>
+
+						<div class="campo">
+							<label for="sobrenome"><strong>Sobrenome </strong></label>
+							<input type="text" name="sobrenome" id="sobrenome" required/>
+						</div>
+					</fieldsetFA>
+
+					<div class="campo">
+						<label for="email"><strong>Email </strong></label>
+						<input type="email" name="email" id="email" required/>
+					</div>
+
+					<div class="campo">
+						<label><strong>Sexo : </strong></label>
+						<label>
+							<input type="radio" name="devweb" value="masculino"/> Masculino
+						</label>
+						<label>
+							<input type="radio" name="devweb" value="feminino"/> Feminino
+						</label>
+					</div>
+
+					<div class="campo">
+						<label for="senioridade"><strong> Possui animais ? </strong></label>
+						<select id="senioridade">
+							<option selected disabled value="">Select...</option>
+							<option>Sim</option>
+							<option>Não</option>
+						</select>
+					</div>
+
+					<fieldsetFA class="grupo">
+						<div id="check">
+							<label><strong>Selecione as tecnologias que utiliza:</strong></label> <br /><br />
+							<input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTMl" />
+							<label for="tecnologia1"> HTML </label>
+							<input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS" />
+							<label for="tecnologia2"> CSS </label>
+							<input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript" />
+							<label for="tecnologia3"> JavaScript </label>
+							<input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP" />
+							<label for="tecnologia4"> PHP </label>
+							<input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#" />
+							<label for="tecnologia5"> C# </label>
+							<input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python" />
+							<label for="tecnologia6"> Python </label>
+							<input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java" />
+							<label for="tecnologia7"> Java </label>
+						</div>
+					</fieldsetFA>
+
+					<div class="campo">
+						<br />
+						<label><strong>Conte um pouco da sua experiência:</strong></label>
+						<textarea rows="4" cols="50" id="experiencia" name="experiencia"></textarea>
+					</div>
+
+					<button class="botao" type="button">Seguinte</button>
+
+				</form>
+			</fieldset1>
+		</body>
+
+	);
+}
+
+-------------------------------CSS----------------------------------
+/* navebar de cima */
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 1000;
+  font-size: 25px;
+  color: Black;
+}
+
+li, a , button{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 25px;
+  color: Black;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-color: rgb(240,240,240);
+
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color:red;
+  transition: all 0.3s ease 0s;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgb(225,225,225);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgb(240,240,240);
+}
+
+/*botoes cao e gato*/
+
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+
+}
+
+.btn1{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition:0.8s;
+}
+
+.btn2{
+  color: black;
+}
+
+.btn1:hover, .btn2:hover{
+  color: #fff;
+}
+
+
+
+/* navebar de baixo da redes sociais*/
+
+.redesbaixoFoundAnimal{
+  background-color: white;
+
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  display: flex;
+  padding: 5px 10%;
+  justify-content: space-between;
+
+}
+.redesidonFoundAnimal{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+/* parte das imagens com containers de informação no meio*/
+bodydFoundAnimal{
+	display:flex;
+	justify-content: center;
+	background: white;
+}
+
+.containerFoundAnimal{
+
+	position: relative;
+	width:1100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0%;
+}
+
+.containerFoundAnimal .card{
+	width:5000px;
+	position: relative;
+	height: 120px;
+	background: rgb(248, 248, 248);
+	margin:100px 100px;
+	display:flex;
+	flex-direction: column;
+	box-shadow: white;
+	transition: all 0.3s ease 0s;
+	margin-top: 4%;
+  border-radius: 10px;
+}
+.containerFoundAnimal .card .imgBx{
+	position: relative;
+	width:1000px;
+	height: 5000px;
+	top: 25px;
+	left:0px;
+}
+
+
+.containerFoundAnimal .card .imgBx img
+{
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+
+h2{
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
+
+
+.textbox/*texbox class*/
+{
+
+margin-right:20px;/*change the px as per your need*/
+
+}
+
+.combo{
+	padding: 10px;
+}
+
+.fixedButton{
+   position: fixed;
+   bottom: 70px;
+   right: 30px;
+   padding: 20px;
+}
+
+/* ------------------Formulário------------------ */
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 32%;
+}
+#subtitulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 25%;
+}
+/* Elementos de tag <fieldset>*/
+fieldsetFA {
+    border: 0;
+}
+
+/* Elemento de tag <body> */
+bodyFA{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+	 margin-left: 8%;
+    margin-top: 7%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+
+fieldset1{
+    background-color: rgb(248, 248, 248);
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+	 margin-left: 21%;
+    margin-top: -4.5%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 60%;
+	 border-radius: 10px;
+}
+/*Só com o body a pagina fica bem de acordo com o código dela mas o resto das paginas ficam mal, com o bodyFA o resto das paginas fica bem mas esta fica mal*/
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+
+}
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+
+}
+
+/* Elemento de classe "botao" */
+.botao {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	 display: flex;
+	 margin-top: 25px;
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+    cursor: pointer;
+}

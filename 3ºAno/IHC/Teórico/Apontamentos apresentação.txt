@@ -1,0 +1,57 @@
+SLIDE 1
+INTRODUÇÃO:
+	-A tecnologia de captura de movimento (Mocap) tem sido usada há muito tempo para fornecer às indústrias de filmes e videogames animações para personagens e criaturas digitais. A tecnologia permite a digitalização do desempenho de um ator e uma subsequente transformação completa da aparência.
+	-Esse tipo de metamorfose oferece muitas possibilidades criativas, mas também traz muitos desafios para os atores,que são obrigados a atuar em estúdios vazios, vestidos com trajes fora do personagem, retratando personagens que não combinam com suas aparências e corpos naturais. [(Por exemplo, qualquer falha de comunicação pode resultar em inconsistência entre a performance e o contexto. Essa desconexão pode se manifestar por movimentos de um ator que não combinam com a aparência final. Estes desafios são ainda mais exigentes entre cenários onde há uma grande discrepância entre as fisionomias dos atores e as suas representações digitais. Geralmente, estas incompatibilidades levam a uma extensa carga de trabalho de animação de pós-processamento)]
+	-Posto isto, surgem os headsets de Realidade Virtual (VR), autônomos e leves, que oferecem novas possibilidades para aliviar muitos destes problemas. O facto de usar VR e combiná-lo com captura de movimento de corpo inteiro, melhora as performances dos atores, levando a uma atuação mais autêntica, e resulta em menos trabalho de pós-processamento.
+
+METER NO PAPEL O QUE ESTÁ DENTRO DOS PARENTESES!!!
+-----------------------------------------------
+
+SLIDE2
+HIPOTESES:
+	-Adicionar as hipóteses que estão na introdução
+
+------------------------------------------------
+RELATED WORK:
+(Pode se dividir em slides para cada proposta!)
+	-A falta de referências visuais é um problema bem conhecido em efeitos visuais e produção virtual.
+	-Ao filmar em estúdios de tela verde, por exemplo, os atores podem ver outros atores físicos e adereços, mas não personagens e ambientes digitais e no caso dos diretores de filme eles não conseguem ver a imagem final ou avaliar o desempenho dos atores durante as filmagens.
+	-Posto isto, Bouville et al, para apoiar a atuação, propôs um sistema para ensaios em realidade virtual. No sistema, os atores podiam se familiarizar com o ambiente virtual e atuar em direção a um tigre animado. Após o ensaio, eles repetiram a cena normalmente no estúdio de tela verde. O estudo mostrou que os atores preferiram o treino de RV ao treino clássico, pois o ensaio deu aos atores uma melhor visão do cenário virtual e possibilitou experimentar diferentes interações com a personagem virtual.
+	-Kade et ai propuseram um sistema usando um projetor montado na cabeça para exibir o ambiente virtual de um ator nos arredores da área de atuação. Os resultados mostraram que o suporte do protótipo tornou as performances mais orientadas do que sem ele, no sentido de permitir que os atores se concentrassem mais nas emoções exigidas e também no facto de ajudar a reduzir a carga mental necessária para imaginar o ambiente.
+	-Mais próximo do estudo feito neste paper é o estudo de Normand et al, em que foi prototipado um sistema para ensaios em um ambiente virtual remoto compartilhado. Ao conectar os participantes (dois atores e um diretor) em uma rede, eles puderam ensaiar através de seus avatares virtuais em um espaço virtual compartilhado onde o sistema usou duas configurações diferentes para atores, uma delas inclui rastreamento de corpo inteiro junto com um HMD, enquanto que a outra usou um sistema CAVE junto com rastreamento parcial de corpo.
+
+	-Atuar em RV, levanta a importante questão de como os usuários devem ser representados. Um estudo de caso informal de Gochfeld et al avaliaram como a aparência do personagem, variando de fotorrealista a caricatural, afetava a experiência do ator. Sem ensaios prévios, os avatares mais abstratos eram preferidos, pois eram mais fáceis de se conectar.
+	-Por fim, vários estudos indicam que a RV pode ser vista como uma forma de alcançar uma presença quase perfeita com outras pessoas. No entanto, ainda existem problemas com a RV que impedem o meio de cumprir totalmente a promessa de copresença total. A falta de informação sobre expressões faciais, olhares e movimentos do corpo e dos dedos são fatores limitantes. Neste paper apenas vai ser falado, na condição de VR, o movimento de corpo inteiro, mas não expressão facial ou olhar.  
+
+
+--------------------------------------------------
+Designing and Implementing an Immersive Collab-Orative Mocap System:
+
+IMPLEMENTATION- SYSTEM HARDWARE:
+	-Utilizam um sistema óptico com marcadores passivos para captura de movimento em nível de estúdio, por fornecerem posições absolutas e por terem menor latência do que os sistemas inerciais
+	-Utilizam o Oculus Quest, por ser leve, ter alta resolução e não restringir o movimento
+	-Usam um sistema de captura de movimento Optitrack com 16 câmeras Prime 41 e uma câmera Prime 17W.
+	-O software Motive 2.2, foi usado para rastrear e interpretar os dados de movimento e transmiti-lo para os fones de ouvido.
+	-Utilizam a configuração padrão de 37 marcadores para rastreamento de corpo inteiro.
+
+IMPLEMENTATION- SOFTWARE IMPLEMENTATION:
+	-Implementamos o sistema no motor de jogo Unity 2019.1.7 usando ferramentas e plugins de integração VR da Oculus 
+	-Para o streaming de esqueleto, usam um plugin do provedor de sistema de captura de movimento Optitrack
+	-Para alinhar a visão do HMD com a perspectiva do personagem virtual, criaram alguns scripts personalizados
+	-Para alinhar a direção do HMD, em vez de usar os valores do esqueleto, aplicam as rotações do sistema de rastreamento interno do Quest
+	-Para minimizar problemas de incompatibilidade corporal, como diferenças na localização das mãos reais e virtuais, usam personagens virtuais com proporções humanas
+
+IMPLEMENTATION- INTERFACE DESIGN: (SECALHAR ADICIONAMOS FOTOS AO PPT)
+	-A interface consiste em um ambiente virtual no qual ocorreria a cena encenada, bem como os dois avatares a serem encarnados pelos atores
+	- Cada ator pode ver o outro personagem, bem como seu próprio corpo virtual a partir de uma perspectiva em primeira pessoa
+	-Além disso, o espaço também poderia servir para ensaio onde os atores poderiam encontrar o equilíbrio e os movimentos adequados para a personagem, mas também como um espaço de treinamento para se acostumarem com o cenário.
+
+HMD- Head-mounted display- METER NO PAPEL!!!
+--------------------------------------------------
+
+
+
+
+
+--------------------------------------------------
+	
